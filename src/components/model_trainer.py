@@ -17,7 +17,7 @@ from xgboost import XGBRegressor
 from src.exception import CustomException
 from src.logger import logging
 
-from src.utils import save_object,evaluate_models
+from src.utils import save_object, evaluate_models
 
 @dataclass
 class ModelTrainerConfig:
@@ -111,8 +111,6 @@ class ModelTrainer:
             r2_square = r2_score(y_test, predicted)
             return r2_square
             
-
-
 
             
         except Exception as e:
