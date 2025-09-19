@@ -17,12 +17,12 @@ from src.utils import save_object
 
 @dataclass
 class DataTransformation_config:
-    preprocessor_ob_file_path = os.path.join('artifact',"preprocessor.pkl")
+    preprocessor_obj_file_path = os.path.join('artifact',"preprocessor.pkl")
 
 
 class DataTransformation:
     def __init__(self):
-        self.data_transfromation_config = DataTransformation_config()
+        self.data_transformation_config = DataTransformation_config()
 
     def get_data_transformer_object(self):
         '''
@@ -48,7 +48,7 @@ class DataTransformation:
                 steps=[
                     ("imputer", SimpleImputer(strategy="most_frequent")),
                     ("one_hot_encoder", OneHotEncoder()),
-                    ("scaler", StandardScaler())
+                    ("scaler", StandardScaler(with_mean=False))
                 ]
             )
 
@@ -86,7 +86,7 @@ class DataTransformation:
             target_feature_train_df = train_df[target_column_name]
 
             input_feature_test_df = test_df.drop(columns=[target_column_name], axis = 1)
-            target_feature_test_df = test_df(columns=[target_column_name], axis=1)
+            target_feature_test_df = test_df[target_column_name]
 
             logging.info(f"Applying preprocessing object on training dataframe and testing dataframe")
 
