@@ -7,11 +7,11 @@ on:
       - 'README.md'
 
 permissions:
-  id-token: write      # OIDC
+  id-token: write    # required for OIDC
   contents: read
 
 env:
-  AWS_REGION: us-east-1          # <-- set your region once
+  AWS_REGION: us-east-1
   ECR_REPOSITORY: ${{ secrets.ECR_REPOSITORY_NAME }}  # e.g., studentperformance-app
 
 jobs:
@@ -33,8 +33,12 @@ jobs:
       - name: Configure AWS credentials (OIDC)
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::<ACCOUNT_ID>:role/GithubActions-mlproject
+          role-to-assume: arn:aws:iam::510706241095:role/GithubActions-mlproject   # <-- ROLE ARN
+          role-session-name: gha-mlproject
           aws-region: ${{ env.AWS_REGION }}
+
+      - name: Who am I?
+        run: aws sts get-caller-identity
 
       - name: Login to Amazon ECR
         id: login-ecr
@@ -47,7 +51,6 @@ jobs:
         run: |
           docker build -t $ECR_REGISTRY/${{ env.ECR_REPOSITORY }}:$IMAGE_TAG .
           docker push $ECR_REGISTRY/${{ env.ECR_REPOSITORY }}:$IMAGE_TAG
-          echo "image=$ECR_REGISTRY/${{ env.ECR_REPOSITORY }}:$IMAGE_TAG" >> $GITHUB_OUTPUT
 
   Continuous-Deployment:
     needs: build-and-push-ecr-image
@@ -58,23 +61,25 @@ jobs:
       - name: Configure AWS credentials (OIDC)
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::<ACCOUNT_ID>:role/GithubActions-mlproject
+          role-to-assume: arn:aws:iam::510706241095:role/GithubActions-mlproject   # <-- ROLE ARN (same)
+          role-session-name: gha-mlproject
           aws-region: ${{ env.AWS_REGION }}
+
+      - name: Who am I?
+        run: aws sts get-caller-identity
 
       - name: Login to Amazon ECR
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v2
 
       - name: Pull latest image
-        run: |
-          docker pull ${{ steps.login-ecr.outputs.registry }}/${{ env.ECR_REPOSITORY }}:latest
+        run: docker pull ${{ steps.login-ecr.outputs.registry }}/${{ env.ECR_REPOSITORY }}:latest
 
       - name: Stop old container (if running)
-        run: |
-          docker ps -q --filter "name=mltest" && docker rm -f mltest || true
+        run: docker ps -q --filter "name=mltest" && docker rm -f mltest || true
 
       - name: Run Docker image
-        # If your app listens on 5000 inside the container, map host 8080 -> container 5000
+        # Your container serves on 5000; map host 8080 -> container 5000
         run: |
           docker run -d --name mltest \
             -p 8080:5000 \
