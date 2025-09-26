@@ -24,15 +24,25 @@ The project uses **Flask, Scikit-learn, Docker, AWS (EC2 + ECR), and GitHub Acti
 ## 📂 Project Structure
 ```
 
-MLPROJECT/
-│── src/                 # ML pipeline and helper modules
-│── templates/           # HTML files (index.html, home.html)
-│── application.py       # Flask app entry point
-│── predict_pipeline.py  # ML prediction pipeline
-│── requirements.txt     # Python dependencies
-│── Dockerfile           # Docker setup
-│── .github/workflows/   # CI/CD pipeline (main.yaml)
-│── README.md            # Documentation
+MLPROJECT/  
+│── src/                     # ML pipeline and helper modules  
+│   │── pipeline/            # Training & preprocessing modules  
+│   │── components/          # Reusable ML components  
+│   │── utils.py             # Utility functions  
+│   │── exception.py         # Custom exceptions  
+│   │── logger.py            # Logging setup  
+│   │── predict_pipeline.py  # ML prediction pipeline  
+│  
+│── templates/               # HTML files (index.html, home.html)  
+│   │── index.html           # Input form page  
+│   │── home.html            # Prediction results page  
+│  
+│── application.py           # Flask app entry point  
+│── requirements.txt         # Python dependencies  
+│── Dockerfile               # Docker setup  
+│── .github/workflows/       # CI/CD pipeline (main.yaml)  
+│   │── main.yaml            # GitHub Actions workflow  
+│── README.md                # Project documentation  
 
 ```
 
