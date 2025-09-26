@@ -5,7 +5,7 @@ This is an **End-to-End Machine Learning web application** that predicts a stude
 
 The project uses **Flask, Scikit-learn, Docker, AWS (EC2 + ECR), and GitHub Actions (CI/CD)**.
 
-## 🚀 Features
+##  Features
 - Web app built with **Flask** and simple HTML templates  
 - Predicts Math score instantly  
 - Containerized with **Docker**  
@@ -21,7 +21,7 @@ The project uses **Flask, Scikit-learn, Docker, AWS (EC2 + ECR), and GitHub Acti
 - **CI/CD:** GitHub Actions  
 
 
-## 📂 Project Structure
+##  Project Structure
 ```
 
 MLPROJECT/  
@@ -47,7 +47,7 @@ MLPROJECT/
 ```
 
 
-## ▶️ Run Locally
+##  Run Locally
 
 1. Clone the repo  
 ````bash
@@ -75,7 +75,7 @@ App runs at: `http://127.0.0.1:5000/`
 
 
 
-## 🐳 Run with Docker
+##  Run with Docker
 
 ```bash
 docker build -t student-performance-app .
@@ -87,7 +87,7 @@ Visit: `http://localhost:5000`
 
 
 
-## ☁️ AWS Deployment
+##  AWS Deployment
 
 1. Push Docker image to AWS ECR
 2. Run container on AWS EC2:
@@ -119,13 +119,13 @@ AWS_ECR_LOGIN_URI
 ECR_REPOSITORY_NAME
 ```
 
-## 📸 Screenshots
+##  Screenshots
 
 * Prediction Form
 <img width="1901" height="893" alt="Screenshot 2025-09-25 185521" src="https://github.com/user-attachments/assets/4341ab99-58a0-4d41-8ebb-5a82c0d0c3ae" />
 
 
-## ✅ Results
+##  Results
 
 * Working ML web app deployed on AWS
 * CI/CD pipeline with GitHub Actions
