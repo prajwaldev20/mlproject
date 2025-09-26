@@ -4,24 +4,23 @@
 This is an **end-to-end Machine Learning web application** that predicts a student’s Math exam score based on details like gender, ethnicity, parental education, lunch type, test preparation course, reading and writing scores.  
 
 The project uses **Flask, Scikit-learn, Docker, AWS (EC2 + ECR), and GitHub Actions (CI/CD)**.
-```
-```
+
 ## 🚀 Features
 - Web app built with **Flask** and simple HTML templates  
 - Predicts Math score instantly  
 - Containerized with **Docker**  
 - Deployed on **AWS EC2** using images from **AWS ECR**  
 - Automated build & deployment with **GitHub Actions**
-```
-```
+
+
 ## ⚙️ Tech Stack
 - **Backend:** Flask  
 - **ML:** Scikit-learn, Pandas, NumPy  
 - **Deployment:** Docker, AWS EC2, AWS ECR  
 - **Server:** Gunicorn  
 - **CI/CD:** GitHub Actions  
-```
-```
+
+
 ## 📂 Project Structure
 
 
@@ -35,8 +34,8 @@ MLPROJECT/
 │── .github/workflows/   # CI/CD pipeline (main.yaml)
 │── README.md            # Documentation
 
-````
-````
+
+
 ## ▶️ Run Locally
 
 1. Clone the repo  
