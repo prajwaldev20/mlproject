@@ -92,6 +92,7 @@ App will be available at:
 ## 📸 Screenshots
 
 * Prediction Form
+<img width="1901" height="893" alt="Screenshot 2025-09-25 185521" src="https://github.com/user-attachments/assets/4341ab99-58a0-4d41-8ebb-5a82c0d0c3ae" />
 
 
 ## ✅ Results
@@ -100,5 +101,3 @@ App will be available at:
 * CI/CD pipeline with GitHub Actions
 * Real-time predictions accessible via browser
 
-
-```
