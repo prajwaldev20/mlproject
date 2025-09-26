@@ -22,7 +22,7 @@ The project uses **Flask, Scikit-learn, Docker, AWS (EC2 + ECR), and GitHub Acti
 
 
 ## 📂 Project Structure
-
+```
 
 MLPROJECT/
 │── src/                 # ML pipeline and helper modules
@@ -34,6 +34,7 @@ MLPROJECT/
 │── .github/workflows/   # CI/CD pipeline (main.yaml)
 │── README.md            # Documentation
 
+```
 
 
 ## ▶️ Run Locally
