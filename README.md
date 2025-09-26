@@ -1,4 +1,4 @@
-```
+
 ## Student Exam Performance Prediction
 
 This is an **end-to-end Machine Learning web application** that predicts a student’s Math exam score based on details like gender, ethnicity, parental education, lunch type, test preparation course, reading and writing scores.  
@@ -13,7 +13,7 @@ The project uses **Flask, Scikit-learn, Docker, AWS (EC2 + ECR), and GitHub Acti
 - Deployed on **AWS EC2** using images from **AWS ECR**  
 - Automated build & deployment with **GitHub Actions**
 ```
-
+```
 ## ⚙️ Tech Stack
 - **Backend:** Flask  
 - **ML:** Scikit-learn, Pandas, NumPy  
@@ -36,26 +36,24 @@ MLPROJECT/
 │── README.md            # Documentation
 
 ````
-
-```
-
+````
 ## ▶️ Run Locally
 
 1. Clone the repo  
 ```bash
 git clone https://github.com/<your-username>/mlproject.git
 cd mlproject
-```
+````
 
 ````
 2. Create environment & install requirements
 
-```bash
+````bash
 python -m venv venv
 source venv/bin/activate   # Linux/Mac
 venv\Scripts\activate      # Windows
 pip install -r requirements.txt
-```
+````
 
 3. Run the app
 
@@ -65,7 +63,7 @@ python application.py
 
 App runs at: `http://127.0.0.1:5000/`
 
----
+
 
 ## 🐳 Run with Docker
 
@@ -76,7 +74,7 @@ docker run -d -p 5000:5000 studentperformance-app
 
 Visit: `http://localhost:5000`
 
----
+
 
 ## ☁️ AWS Deployment
 
