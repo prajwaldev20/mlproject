@@ -109,5 +109,4 @@ App will be available at:
 * Real-time predictions accessible via browser
 
 
-👉 Do you also want me to add a **GitHub Actions build status badge** at the top (so it shows your CI/CD success/failure live)?
 ```
