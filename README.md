@@ -78,8 +78,9 @@ App runs at: `http://127.0.0.1:5000/`
 ## 🐳 Run with Docker
 
 ```bash
-docker build -t studentperformance-app .
-docker run -d -p 5000:5000 studentperformance-app
+docker build -t student-performance-app .
+docker run -p 8080:5000 student-performance-app
+
 ```
 
 Visit: `http://localhost:5000`
@@ -98,7 +99,25 @@ docker run -d --name mltest -p 80:5000 <ECR-URI>:latest
 App will be available at:
 `http://<EC2-Public-IP>/predictdata`
 
----
+## CI/CD with GitHub Actions
+
+Continuous Integration: Runs tests & builds Docker image
+
+Continuous Delivery: Pushes image to AWS ECR
+
+Continuous Deployment: Deploys container on EC2
+
+```bash
+AWS_ACCESS_KEY_ID
+
+AWS_SECRET_ACCESS_KEY
+
+AWS_REGION
+
+AWS_ECR_LOGIN_URI
+
+ECR_REPOSITORY_NAME
+```
 
 ## 📸 Screenshots
 
