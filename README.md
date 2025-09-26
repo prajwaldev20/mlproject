@@ -50,7 +50,7 @@ MLPROJECT/
 ## ▶️ Run Locally
 
 1. Clone the repo  
-```bash
+````bash
 git clone https://github.com/<your-username>/mlproject.git
 cd mlproject
 ````
