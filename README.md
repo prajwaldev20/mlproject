@@ -13,7 +13,7 @@ The project uses **Flask, Scikit-learn, Docker, AWS (EC2 + ECR), and GitHub Acti
 - Automated build & deployment with **GitHub Actions**
 
 
-## ⚙️ Tech Stack
+##  Tech Stack
 - **Backend:** Flask  
 - **ML:** Scikit-learn, Pandas, NumPy  
 - **Deployment:** Docker, AWS EC2, AWS ECR  
