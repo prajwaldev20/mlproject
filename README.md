@@ -1,7 +1,3 @@
-Got it 👍 — here’s a **simple, clean, final `README.md`** version you can put directly in your GitHub repo:
-
----
-
 ```markdown
 # Student Exam Performance Prediction 🎓
 
