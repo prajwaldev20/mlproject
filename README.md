@@ -98,8 +98,6 @@ App will be available at:
 
 * Prediction Form
 
-(Add screenshots in a `screenshots/` folder)
-
 ---
 
 ## ✅ Results
