@@ -1,7 +1,7 @@
 
 ## Student Exam Performance Prediction
 
-This is an **end-to-end Machine Learning web application** that predicts a student’s Math exam score based on details like gender, ethnicity, parental education, lunch type, test preparation course, reading and writing scores.  
+This is an **End-to-End Machine Learning web application** that predicts a student’s Math exam score based on details like gender, ethnicity, parental education, lunch type, test preparation course, reading and writing scores.  
 
 The project uses **Flask, Scikit-learn, Docker, AWS (EC2 + ECR), and GitHub Actions (CI/CD)**.
 
